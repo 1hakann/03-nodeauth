@@ -15,3 +15,14 @@ const mongo = require('mongodb');
 const mongoose = require('mongoose');
 
 const db = mongoose.connection;
+
+const routes = require('./routes/index');
+const users = require('./routes/users');
+
+const app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+module.exports = app;
